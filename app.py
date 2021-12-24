@@ -5,6 +5,7 @@ app = Flask(__name__)
 omikuji = ["ウルトラ吉","大吉","中吉","吉","小吉","ウルトラ凶"]
 prob    = [0.02, 0.07, 0.2, 0.3, 0.4, 0.01]
 html1="""
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>あけおめ2022おみくじ</title>
 <h1>おみくじサイト</h1>
 今年の運勢はこれで決まり！<br>

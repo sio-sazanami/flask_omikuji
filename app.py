@@ -2,8 +2,8 @@ from flask import Flask, request, render_template
 import random
 app = Flask(__name__)
 
-omikuji = ["ウルトラ吉","大吉","中吉","吉","小吉","ウルトラ凶"]
-prob    = [0.02, 0.07, 0.2, 0.3, 0.4, 0.01]
+omikuji = ["ウルトラ大吉","大吉","中吉","小吉","吉","末吉","ウルトラ凶","あけおめ！今年もよろしく!"]
+prob    = [0.02, 0.089, 0.15, 0.18, 0.25, 0.3, 0.01, 0.001]
 html1="""
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>あけおめ2022おみくじ</title>
@@ -18,31 +18,48 @@ html1="""
         <caption>おみくじ排出確率表</caption>
         <tr>
             <th>種類</th>
+            <td>レアリティ</td>
             <td>排出確率</td>
         </tr>
         <tr>
-            <th>ウルトラ吉</th>
+            <th>ウルトラ大吉</th>
+            <td>SSR</td>
             <td>2%</td>
         </tr>
         <tr>
             <th>大吉</th>
-            <td>7%</td>
+            <td>SR</td>
+            <td>8.9%</td>
         </tr>
         <tr>
             <th>中吉</th>
-            <td>20%</td>
-        </tr>
-        <tr>
-            <th>吉</th>
-            <td>30%</td>
+            <td>R</td>
+            <td>15%</td>
         </tr>
         <tr>
             <th>小吉</th>
-            <td>40%</td>
+            <td>R</td>
+            <td>18%</td>
+        </tr>
+        <tr>
+            <th>吉</th>
+            <td>N</td>
+            <td>25%</td>
+        </tr>
+        <tr>
+            <th>末吉</th>
+            <td>N</td>
+            <td>30%</td>
         </tr>
         <tr>
             <th>ウルトラ凶</th>
+            <td>逆にSSR</td>
             <td>1%</td>
+        </tr>
+        <tr>
+            <th>シークレット</th>
+            <td>UR</td>
+            <td>0.1%</td>
         </tr>
     </table>
 """

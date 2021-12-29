@@ -1,0 +1,19 @@
+body{
+    background: #eeeeee;
+    font-family: Meiryo;
+}
+div{
+    background: #ffffff;
+    width: 500px;
+    padding: 10px;
+    text-align: center;
+    margin: 30px auto;
+}
+table{
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+h1{
+    font-size: 50px;
+}

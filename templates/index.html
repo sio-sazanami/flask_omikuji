@@ -4,64 +4,93 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>あけおめ2022おみくじ</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"/>
     </head>
     <body>
-        <h1>おみくじ無線(株)</h1>
-        今年の運勢はこれで決まり!<br>
-        10連ガチャもありますよ～～～!<br>
-        <img src="./static/kujibako.png" width="100" height="120">
-        <form action='/' method='POST'>
-            <input type='submit' name="send" value='1回占う'/>
-            <input type='submit' name="send" value='10回占う'/>
-        </form>
-        <table border="1">
-            <caption>おみくじ排出確率表</caption>
-            <tr>
-                <th>種類</th>
-                <td>レアリティ</td>
-                <td>排出確率</td>
-            </tr>
-            <tr>
-                <th>ウルトラ大吉</th>
-                <td>SSR</td>
-                <td>2%</td>
-            </tr>
-            <tr>
-                <th>大吉</th>
-                <td>SR</td>
-                <td>8.9%</td>
-            </tr>
-            <tr>
-                <th>中吉</th>
-                <td>R</td>
-                <td>15%</td>
-            </tr>
-            <tr>
-                <th>小吉</th>
-                <td>R</td>
-                <td>18%</td>
-            </tr>
-            <tr>
-                <th>吉</th>
-                <td>N</td>
-                <td>25%</td>
-            </tr>
-            <tr>
-                <th>末吉</th>
-                <td>N</td>
-                <td>30%</td>
-            </tr>
-            <tr>
-                <th>ウルトラ凶</th>
-                <td>逆にSSR?</td>
-                <td>1%</td>
-            </tr>
-            <tr>
-                <th>シークレット</th>
-                <td>UR</td>
-                <td>0.1%</td>
-            </tr>
-        </table>
-        <h2>{{ result }}</h2>
+        <div>
+            <h1>おみくじ無線(株)</h1>
+            <p>今年の運勢はこれで決まり!</p>
+            <p>10連ガチャもありますよ～～～!</p>
+
+            <img src="./static/kujibako.png" width="100" height="120">
+
+            <form action='/' method='POST'>
+                <input type='submit' name="send" value='1回占う'/>
+                <input type='submit' name="send" value='10回占う'/>
+            </form>
+
+            {% if results != NULL %}
+                <table border=2>
+                </br>
+                    <tr><th>おみくじ結果</th><th>レア度</th></tr>
+                        {% for column in results: %}
+                            {% if column[1] == "SR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="green"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "SSR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="red"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "逆にSSR?"%}
+                                <tr><td>{{column[0]}}</td><td><font color="blue"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "UR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="darkorange"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% else %}
+                                <tr><td>{{column[0]}}</td><td><b>{{column[1]}}</b></td><tr>
+                            {% endif %}
+                        {% endfor %}
+            {% endif %}
+
+            <table border="1">
+            </br>
+                <caption>おみくじ排出確率表</caption>
+                <tr>
+                    <th>種類</th>
+                    <td>レアリティ</td>
+                    <td>排出確率</td>
+                </tr>
+                <tr>
+                    <th>ウルトラ大吉</th>
+                    <td>SSR</td>
+                    <td>3%</td>
+                </tr>
+                <tr>
+                    <th>大吉</th>
+                    <td>SR</td>
+                    <td>9%</td>
+                </tr>
+                <tr>
+                    <th>中吉</th>
+                    <td>R</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <th>小吉</th>
+                    <td>R</td>
+                    <td>18%</td>
+                </tr>
+                <tr>
+                    <th>吉</th>
+                    <td>N</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <th>末吉</th>
+                    <td>N</td>
+                    <td>20%</td>
+                </tr>
+                <tr>
+                    <th>ウルトラ凶</th>
+                    <td>逆にSSR?</td>
+                    <td>3%</td>
+                </tr>
+                <tr>
+                    <th>シークレット</th>
+                    <td>UR</td>
+                    <td>1%</td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>

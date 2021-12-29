@@ -23,7 +23,7 @@ table{
 h1{
     font-size: 50px;
 }
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 600px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
     body{
         background: #eeeeee;
@@ -31,17 +31,17 @@ h1{
     }
     div{
         background: #ffffff;
-        width: 500px;
+        width: 300px;
         padding: 10px;
         text-align: center;
         margin: 30px auto;
     }
     table{
-        width: 300px;
+        width: 290px;
         text-align: center;
-        margin: 10px auto;
+        margin: 50px auto;
     }
     h1{
-        font-size: 50px;
+        font-size: 30px;
     }
 }

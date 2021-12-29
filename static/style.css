@@ -1,6 +1,7 @@
+/* スマホ用 */
 body{
     background: #eeeeee;
-    font-family: sans-serif;
+    font-family: sans-serif; /* ゴシック体 */
 }
 .content{
     background: #ffffff;
@@ -9,7 +10,7 @@ body{
     text-align: center;
     margin: 5px auto;
 }
-.flex{
+.flex{ /* Tableを横並びさせない */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,7 +26,7 @@ table th,table td{
     padding: 10px 0;
     text-align: center;
 }
-.button {
+.button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 12pt;        /* 文字サイズ */
@@ -48,7 +49,7 @@ h1{
     font-size: 30px;
 }
 
-
+/* PC用 */
 @media screen and (min-width: 481px){
     body{
         background: #eeeeee;
@@ -61,7 +62,7 @@ h1{
         text-align: center;
         margin: 10px auto;
     }
-    .flex{
+    .flex{/* Tableを横並びさせる */
         display: flex;
         -webkit-box-align: start;
         -ms-flex-align: start;
@@ -74,7 +75,6 @@ h1{
         border-collapse: collapse;
         border-spacing: 0;
     }
-
     table th,table td{
     padding: 10px 0;
     text-align: center;
@@ -82,7 +82,7 @@ h1{
     h1{
         font-size: 50px;
     }
-    .button {
+    .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
         display       : inline-block;
         border-radius : 5%;          /* 角丸       */
         font-size     : 12pt;        /* 文字サイズ */

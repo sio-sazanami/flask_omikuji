@@ -2,12 +2,18 @@ body{
     background: #eeeeee;
     font-family: Meiryo;
 }
-div{
+.content{
     background: #ffffff;
-    width: 500px;
+    width: 800px;
     padding: 10px;
     text-align: center;
-    margin: 30px auto;
+    margin: 10px auto;
+}
+.flex{
+    display: flex;
+    -webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 }
 table{
     width: 300px;
@@ -16,4 +22,26 @@ table{
 }
 h1{
     font-size: 50px;
+}
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    body{
+        background: #eeeeee;
+        font-family: Meiryo;
+    }
+    div{
+        background: #ffffff;
+        width: 500px;
+        padding: 10px;
+        text-align: center;
+        margin: 30px auto;
+    }
+    table{
+        width: 300px;
+        text-align: center;
+        margin: 10px auto;
+    }
+    h1{
+        font-size: 50px;
+    }
 }

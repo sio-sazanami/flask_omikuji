@@ -15,11 +15,33 @@
             <img src="./static/kujibako.png" width="100" height="120">
 
             <form action='/' method='POST'>
-                <input type='submit' name="send" value='1回占う'/>
-                <input type='submit' name="send" value='10回占う'/>
+                <input type="submit" value="1回占う" class="button" name="send">
+                <input type="submit" value="10回占う" class="button" name="send">
             </form>
 
             <div class="flex">
+
+                <table border=1>
+                </br>
+                    <tr><th>おみくじ結果</th><th>レア度</th></tr>
+                        {% for column in results: %}
+                            {% if column[1] == "SR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="green"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "SSR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="red"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "逆にSSR?"%}
+                                <tr><td>{{column[0]}}</td><td><font color="blue"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% elif column[1] == "UR"%}
+                                <tr><td>{{column[0]}}</td><td><font color="darkorange"><b>{{column[1]}}</b></font></td></tr>
+
+                            {% else %}
+                                <tr><td>{{column[0]}}</td><td><b>{{column[1]}}</b></td><tr>
+                            {% endif %}
+                        {% endfor %}
+                </table>
 
                 <table border=1>
                 </br>
@@ -68,27 +90,6 @@
                         <td>UR</td>
                         <td>1%</td>
                     </tr>
-                </table>
-                <table border=1>
-                </br>
-                    <tr><th>おみくじ結果</th><th>レア度</th></tr>
-                        {% for column in results: %}
-                            {% if column[1] == "SR"%}
-                                <tr><td>{{column[0]}}</td><td><font color="green"><b>{{column[1]}}</b></font></td></tr>
-
-                            {% elif column[1] == "SSR"%}
-                                <tr><td>{{column[0]}}</td><td><font color="red"><b>{{column[1]}}</b></font></td></tr>
-
-                            {% elif column[1] == "逆にSSR?"%}
-                                <tr><td>{{column[0]}}</td><td><font color="blue"><b>{{column[1]}}</b></font></td></tr>
-
-                            {% elif column[1] == "UR"%}
-                                <tr><td>{{column[0]}}</td><td><font color="darkorange"><b>{{column[1]}}</b></font></td></tr>
-
-                            {% else %}
-                                <tr><td>{{column[0]}}</td><td><b>{{column[1]}}</b></td><tr>
-                            {% endif %}
-                        {% endfor %}
                 </table>
             </div>
         </div>

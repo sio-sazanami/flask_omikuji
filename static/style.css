@@ -1,52 +1,104 @@
 body{
     background: #eeeeee;
-    font-family: Meiryo;
+    font-family: sans-serif;
 }
 .content{
     background: #ffffff;
-    width: 640px;
-    padding: 10px;
+    width: 350px;
+    padding: 5px;
     text-align: center;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 .flex{
-    display: flex;
-    -webkit-box-align: start;
-	-ms-flex-align: start;
-	align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 table{
-    width: 300px;
+    width: 290px;
     text-align: center;
     margin: 10px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+table th,table td{
+    padding: 10px 0;
+    text-align: center;
+}
+.button {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 12pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #333333;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
+    border        : 2px solid #333333;    /* 枠の指定 */
+  }
+  .button:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #333333;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+  }
 h1{
-    font-size: 50px;
+    font-size: 30px;
 }
 
-@media screen and (max-width: 481px){
+
+@media screen and (min-width: 481px){
     body{
         background: #eeeeee;
-        font-family: Meiryo;
+        font-family: sans-serif;
     }
     .content{
         background: #ffffff;
-        width: 350px;
-        padding: 5px;
+        width: 640px;
+        padding: 10px;
         text-align: center;
-        margin: 5px auto;
+        margin: 10px auto;
     }
     .flex{
+        display: flex;
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
     }
     table{
-        width: 290px;
+        width: 300px;
         text-align: center;
         margin: 10px auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    table th,table td{
+    padding: 10px 0;
+    text-align: center;
     }
     h1{
-        font-size: 30px;
+        font-size: 50px;
     }
+    .button {
+        display       : inline-block;
+        border-radius : 5%;          /* 角丸       */
+        font-size     : 12pt;        /* 文字サイズ */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 5px 5px;   /* 余白       */
+        background    : #333333;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */
+        box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
+        border        : 2px solid #333333;    /* 枠の指定 */
+      }
+      .button:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #333333;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+      }
 }

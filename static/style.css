@@ -38,16 +38,16 @@ table th,table td{
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : hsl(0, 91%, 63%);     /* 背景色     */
+    background    : #ff4949;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
     line-height   : 1em;         /* 1行の高さ  */
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
-    border        : 2px solid hsl(0, 91%, 63%);    /* 枠の指定 */
+    border        : 2px solid #ff4949;    /* 枠の指定 */
   }
   .button:hover {
     box-shadow    : none;        /* カーソル時の影消去 */
-    color         : #f74b4b;     /* 背景色     */
+    color         : #ff4949;     /* 背景色     */
     background    : #ffffff;     /* 文字色     */
   }
   .top_column{
@@ -106,7 +106,7 @@ h3{
         margin: 0;
     }
     .top_column{
-        background: hsl(0, 81%, 89%);
+        background: #facccc;
     }
     .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
         font-family: 'Zen Maru Gothic', sans-serif;
@@ -116,16 +116,16 @@ h3{
         text-align    : center;      /* 文字位置   */
         cursor        : pointer;     /* カーソル   */
         padding       : 5px 5px;   /* 余白       */
-        background    : hsl(0, 91%, 63%);     /* 背景色     */
+        background    : #ff4949;     /* 背景色     */
         color         : #ffffff;     /* 文字色     */
         line-height   : 1em;         /* 1行の高さ  */
         transition    : .3s;         /* なめらか変化 */
         box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
-        border        : 2px solid hsl(0, 91%, 63%);    /* 枠の指定 */
+        border        : 2px solid #ff4949;    /* 枠の指定 */
       }
       .button:hover {
         box-shadow    : none;        /* カーソル時の影消去 */
-        color         : hsl(0, 91%, 63%);     /* 背景色     */
+        color         : #ff4949;     /* 背景色     */
         background    : #ffffff;     /* 文字色     */
       }
 }

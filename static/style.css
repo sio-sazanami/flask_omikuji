@@ -47,7 +47,7 @@ table th,table td{
   }
   .button:hover {
     box-shadow    : none;        /* カーソル時の影消去 */
-    color         : hsl(0, 91%, 63%);     /* 背景色     */
+    color         : #f74b4b;     /* 背景色     */
     background    : #ffffff;     /* 文字色     */
   }
   .top_column{
@@ -71,7 +71,7 @@ h3{
     }
     .content{
         background: #ffffff;
-        width: 640px;
+        width: 700px;
         padding: 10px;
         text-align: center;
         margin: 10px auto;

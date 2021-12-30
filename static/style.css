@@ -35,7 +35,7 @@ table th,table td{
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #333333;     /* 背景色     */
+    background    : hsl(0, 91%, 63%);     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
     line-height   : 1em;         /* 1行の高さ  */
     transition    : .3s;         /* なめらか変化 */
@@ -47,8 +47,16 @@ table th,table td{
     color         : hsl(0, 91%, 63%);     /* 背景色     */
     background    : #ffffff;     /* 文字色     */
   }
+  .top_column{
+    background: hsl(0, 81%, 89%);
+}
 h1{
     font-size: 30px;
+    margin: 0;
+}
+h3{
+    font-size: 20px;
+    margin: 0;
 }
 
 /* PC用 */
@@ -84,9 +92,14 @@ h1{
     }
     h1{
         font-size: 50px;
+        margin: 0;
+    }
+    h3{
+        font-size: 20px;
+        margin: 0;
     }
     .top_column{
-        background: hsl(0, 100%, 85%);
+        background: hsl(0, 81%, 89%);
     }
     .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
         font-family: 'Zen Maru Gothic', sans-serif;

@@ -11,9 +11,12 @@ body{
     text-align: center;
     margin: 5px auto;
 }
+.content_title{
+    margin: 10px;
+}
 .flex{ /* Tableを横並びさせない */
     list-style-type: none;
-    margin: 0;
+    margin: 10px auto;
     padding: 0;
 }
 table{
@@ -24,7 +27,7 @@ table{
     border-spacing: 0;
 }
 table th,table td{
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
 }
 .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
@@ -51,7 +54,7 @@ table th,table td{
     background: hsl(0, 81%, 89%);
 }
 h1{
-    font-size: 25px;
+    font-size: 28px;
     margin: 0;
 }
 h3{
@@ -73,11 +76,15 @@ h3{
         text-align: center;
         margin: 10px auto;
     }
+    .content_title{
+        margin: 10px auto;
+    }
     .flex{/* Tableを横並びさせる */
         display: flex;
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
+        margin: 10px auto;
     }
     table{
         width: 300px;
@@ -87,7 +94,7 @@ h3{
         border-spacing: 0;
     }
     table th,table td{
-        padding: 10px 0;
+        padding: 5px 0;
         text-align: center;
     }
     h1{

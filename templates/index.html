@@ -2,13 +2,15 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>あけおめ2022おみくじ</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"/>
     </head>
     <body>
         <div class="content">
-            <h1>おみくじ無線(株)</h1>
+            <h1>インターネットおみくじ</h1>
             <p>今年の運勢はこれで決まり!</p>
             <p>10連ガチャもありますよ～～～!</p>
 
@@ -23,7 +25,7 @@
 
                 <table border=1>
                 </br>
-                    <tr><th>おみくじ結果</th><th>レア度</th></tr>
+                    <tr class="top_column"><th>おみくじ結果</th><th>レア度</th></tr>
                         {% for column in results: %}
                             {% if column[1] == "SR"%}
                                 <tr><td>{{column[0]}}</td><td><font color="green"><b>{{column[1]}}</b></font></td></tr>
@@ -45,48 +47,48 @@
 
                 <table border=1>
                 </br>
-                    <tr>
+                    <tr class="top_column">
                         <th>種類</th>
-                        <td>レアリティ</td>
-                        <td>排出確率</td>
+                        <th>レアリティ</th>
+                        <th>排出確率</th>
                     </tr>
                     <tr>
-                        <th>ウルトラ大吉</th>
+                        <td>ウルトラ大吉</td>
                         <td>SSR</td>
                         <td>3%</td>
                     </tr>
                     <tr>
-                        <th>大吉</th>
+                        <td>大吉</td>
                         <td>SR</td>
                         <td>9%</td>
                     </tr>
                     <tr>
-                        <th>中吉</th>
+                        <td>中吉</td>
                         <td>R</td>
                         <td>15%</td>
                     </tr>
                     <tr>
-                        <th>小吉</th>
+                        <td>小吉</td>
                         <td>R</td>
                         <td>18%</td>
                     </tr>
                     <tr>
-                        <th>吉</th>
+                        <td>吉</td>
                         <td>N</td>
                         <td>20%</td>
                     </tr>
                     <tr>
-                        <th>末吉</th>
+                        <td>末吉</td>
                         <td>N</td>
                         <td>20%</td>
                     </tr>
                     <tr>
-                        <th>ウルトラ凶</th>
+                        <td>ウルトラ凶</td>
                         <td>逆にSSR?</td>
                         <td>3%</td>
                     </tr>
                     <tr>
-                        <th>シークレット</th>
+                        <td>シークレット</td>
                         <td>UR</td>
                         <td>1%</td>
                     </tr>

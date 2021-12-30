@@ -1,7 +1,8 @@
 /* スマホ用 */
 body{
     background: #eeeeee;
-    font-family: sans-serif; /* ゴシック体 */
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: rgb(39, 39, 39);
 }
 .content{
     background: #ffffff;
@@ -27,6 +28,7 @@ table th,table td{
     text-align: center;
 }
 .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
+    font-family: 'Zen Maru Gothic', sans-serif;
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 12pt;        /* 文字サイズ */
@@ -38,11 +40,11 @@ table th,table td{
     line-height   : 1em;         /* 1行の高さ  */
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
-    border        : 2px solid #333333;    /* 枠の指定 */
+    border        : 2px solid hsl(0, 91%, 63%);    /* 枠の指定 */
   }
   .button:hover {
     box-shadow    : none;        /* カーソル時の影消去 */
-    color         : #333333;     /* 背景色     */
+    color         : hsl(0, 91%, 63%);     /* 背景色     */
     background    : #ffffff;     /* 文字色     */
   }
 h1{
@@ -53,7 +55,8 @@ h1{
 @media screen and (min-width: 481px){
     body{
         background: #eeeeee;
-        font-family: sans-serif;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        color: rgb(39, 39, 39);
     }
     .content{
         background: #ffffff;
@@ -76,29 +79,33 @@ h1{
         border-spacing: 0;
     }
     table th,table td{
-    padding: 10px 0;
-    text-align: center;
+        padding: 10px 0;
+        text-align: center;
     }
     h1{
         font-size: 50px;
     }
+    .top_column{
+        background: hsl(0, 100%, 85%);
+    }
     .button { /* ボタンデザインはこのサイトで生成 https://webparts.cman.jp/button/submit/ */
+        font-family: 'Zen Maru Gothic', sans-serif;
         display       : inline-block;
         border-radius : 5%;          /* 角丸       */
         font-size     : 12pt;        /* 文字サイズ */
         text-align    : center;      /* 文字位置   */
         cursor        : pointer;     /* カーソル   */
         padding       : 5px 5px;   /* 余白       */
-        background    : #333333;     /* 背景色     */
+        background    : hsl(0, 91%, 63%);     /* 背景色     */
         color         : #ffffff;     /* 文字色     */
         line-height   : 1em;         /* 1行の高さ  */
         transition    : .3s;         /* なめらか変化 */
         box-shadow    : 1px 1px 4px #666666;  /* 影の設定 */
-        border        : 2px solid #333333;    /* 枠の指定 */
+        border        : 2px solid hsl(0, 91%, 63%);    /* 枠の指定 */
       }
       .button:hover {
         box-shadow    : none;        /* カーソル時の影消去 */
-        color         : #333333;     /* 背景色     */
+        color         : hsl(0, 91%, 63%);     /* 背景色     */
         background    : #ffffff;     /* 文字色     */
       }
 }
